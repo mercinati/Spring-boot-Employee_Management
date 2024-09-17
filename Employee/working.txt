@@ -1,0 +1,14 @@
+whenever a user hits anything, it will go to the @RestController after hitting 
+RestController it will call the @Service layer, and the service layer will call
+the DAO layer.
+
+@RestController ---> @Service ---> DAO Layer(ServiceImpl) <---------- model @Data
+  ^                 (Interface)                               |------ repository @repository (Interface)
+ / \                                                          |------ entity @Entity                  
+  |
+  |
+@User (Provides data stored in @Model)
+
+
+Dependency Injection means --> IOC Container makes the object for us when it is
+needed. 
